@@ -2,6 +2,7 @@ package creatures
 
 // Creature - strange biorobots
 type Creature struct {
+	Name string
 	Eyes []CreatureEye
 	Legs []CreatureLeg
 }
