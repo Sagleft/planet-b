@@ -1,13 +1,19 @@
 package main
 
-type solution struct{}
+import (
+	"./notifications"
+	"./world"
+)
+
+type solution struct {
+	Noty notifications.GodNotificator
+}
 
 func newSolution() solution {
 	return solution{}
 }
 
 func (sol *solution) run() {
-	world := newWorld()
-
+	w := world.NewWorld()
 	// TODO
 }
