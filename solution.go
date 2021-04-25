@@ -6,11 +6,17 @@ import (
 )
 
 type solution struct {
-	Noty notifications.GodNotificator
+	Noty *notifications.GodNotificator
 }
 
-func newSolution() solution {
-	return solution{}
+func newSolution() (*solution, error) {
+	noty, err := notifications.NewGodNotificator()
+	if err != nil {
+		return nil, err
+	}
+	return &solution{
+		Noty: noty,
+	}, nil
 }
 
 func (sol *solution) run() {

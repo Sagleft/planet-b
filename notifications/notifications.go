@@ -21,7 +21,8 @@ type Messenger struct {
 	ChatID   string
 }
 
-func newGodNotificator() (*GodNotificator, error) {
+// NewGodNotificator - create new notificator
+func NewGodNotificator() (*GodNotificator, error) {
 	jsonBytes, err := ioutil.ReadFile(notificationsConfigPath)
 	if err != nil {
 		return nil, err
